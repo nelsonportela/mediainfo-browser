@@ -1,9 +1,9 @@
-FROM python:3.12-slim
+FROM python:3.12-alpine
 
 # Install system dependencies including FFmpeg
-RUN apt-get update && apt-get install -y \
+RUN apk add --no-cache \
     ffmpeg \
-    && rm -rf /var/lib/apt/lists/*
+    && rm -rf /var/cache/apk/*
 
 # Set working directory
 WORKDIR /app
