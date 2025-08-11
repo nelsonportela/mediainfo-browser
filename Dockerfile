@@ -17,7 +17,7 @@ COPY app.py .
 COPY templates/ templates/
 
 # Create a non-root user for security
-RUN useradd -m -u 1000 mediauser && chown -R mediauser:mediauser /app
+RUN adduser -D -u 1000 mediauser && chown -R mediauser:mediauser /app
 USER mediauser
 
 # Expose port
