@@ -1,0 +1,32 @@
+services:
+  mediainfo:
+    image: fuguone/mediainfo-browser:latest
+    container_name: mediainfo-browser
+    ports:
+      - "5000:5000"
+    volumes:
+      # Mount your media directory (adjust the path as needed)
+      - /mnt/wd_2tb/media:/media:ro
+    environment:
+      - FLASK_ENV=production
+      - MEDIA_ROOT=/media
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import requests; requests.get('http://localhost:5000/api/browse')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+    # Resource limits
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+        reservations:
+          memory: 256M
+    # Logging configuration
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
