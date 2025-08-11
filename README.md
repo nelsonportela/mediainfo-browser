@@ -21,8 +21,8 @@ A clean and minimal web UI for browsing video files and displaying their metadat
 
 ### 1. Clone or Download
 ```bash
-git clone <repository> # or download the files
-cd mediainfo
+git clone https://github.com/nelsonportela/mediainfo-browser.git # or download the files
+cd mediainfo-browser
 ```
 
 ### 2. Build the Image (Optional - for local development)
@@ -32,7 +32,7 @@ docker build -t mediainfo-browser:latest .
 
 Or use the pre-built image from Docker Hub:
 ```bash
-docker pull fuguone/mediainfo-browser:latest
+docker pull nelsonportela/mediainfo-browser:latest
 ```
 
 ### 3. Configure Media Path
@@ -145,7 +145,7 @@ FLASK_ENV=production
 ### Building and Deployment
 ```bash
 # Pull latest image from Docker Hub
-docker pull fuguone/mediainfo-browser:latest
+docker pull nelsonportela/mediainfo-browser:latest
 
 # Or build locally for development
 docker build -t mediainfo-browser:latest .
@@ -163,7 +163,7 @@ docker-compose ps
 docker-compose down
 
 # Update to latest version
-docker pull fuguone/mediainfo-browser:latest && docker-compose up -d
+docker pull nelsonportela/mediainfo-browser:latest && docker-compose up -d
 ```
 
 ## Features Overview
