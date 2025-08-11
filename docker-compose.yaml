@@ -1,6 +1,6 @@
 services:
   mediainfo:
-    image: nelsonportela/mediainfo-browser:latest
+    image: fuguone/mediainfo-browser:latest
     container_name: mediainfo-browser
     ports:
       - "5000:5000"
