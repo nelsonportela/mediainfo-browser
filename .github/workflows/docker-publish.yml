@@ -26,4 +26,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: nelsonportela/mediainfo-browser:${{ github.ref_name }},nelsonportela/mediainfo-browser:latest
+          tags: fuguone/mediainfo-browser:${{ github.ref_name }},fuguone/mediainfo-browser:latest
