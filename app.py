@@ -14,9 +14,9 @@ from urllib.parse import unquote
 app = Flask(__name__)
 
 # Configuration - can be overridden by environment variables
-MEDIA_ROOT = os.getenv('MEDIA_ROOT', '~')
+MEDIA_ROOT = os.getenv('MEDIA_ROOT', '/mnt/wd_2tb/media')
 HOST = os.getenv('HOST', '0.0.0.0')
-PORT = int(os.getenv('PORT', 5000))
+PORT = int(os.getenv('PORT', 5001))
 DEBUG = os.getenv('FLASK_ENV', 'development') == 'development'
 
 SUPPORTED_EXTENSIONS = {'.mp4', '.mkv', '.avi', '.mov', '.wmv', '.flv', '.webm', '.m4v', '.mpg', '.mpeg', '.3gp'}

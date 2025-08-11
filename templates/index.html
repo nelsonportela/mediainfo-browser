@@ -12,7 +12,7 @@
             --surface: #ffffff;
             --text-primary: #1e293b;
             --text-secondary: #64748b;
-            --border: #e2e8f0;
+            /* --border: #e2e8f0; */
             --border-hover: #cbd5e1;
             --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
             --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
@@ -141,6 +141,16 @@
         .video-card .card-title {
             flex: 1;
             margin-right: 1rem;
+            overflow: hidden;
+        }
+
+        .video-card .card-title-text {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            word-break: break-all;
+            hyphens: auto;
+            line-height: 1.3;
+            font-size: 0.95rem;
         }
 
         .video-card .card-subtitle {
@@ -161,8 +171,18 @@
             align-items: center;
             gap: 0.75rem;
             font-weight: 600;
-            font-size: 1.1rem;
+            font-size: 1rem;
             margin-bottom: 0.25rem;
+            overflow: hidden; /* Prevent overflow */
+        }
+
+        .card-title-text {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            word-break: break-all;
+            hyphens: auto;
+            line-height: 1.3;
+            min-width: 0; /* Allow text to shrink */
         }
 
         .card-subtitle {
@@ -175,9 +195,10 @@
         }
 
         .icon {
-            width: 20px;
-            height: 20px;
+            width: 18px;
+            height: 18px;
             fill: currentColor;
+            flex-shrink: 0; /* Prevent icons from shrinking */
         }
 
         .folder-icon {
@@ -366,15 +387,21 @@
         .back-button {
             display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
-            padding: 0.75rem 1.5rem;
+            gap: 0.4rem;
+            padding: 0.5rem 1rem;
             background: var(--primary-color);
             color: white;
             text-decoration: none;
             border-radius: var(--radius);
             font-weight: 500;
+            font-size: 0.875rem;
             transition: background-color 0.2s;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .back-button svg {
+            width: 14px;
+            height: 14px;
         }
 
         .back-button:hover {
@@ -398,15 +425,22 @@
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 0.5rem;
+                padding: 1rem;
             }
 
             .video-card .card-title {
                 margin-right: 0;
+                width: 100%;
+            }
+
+            .video-card .card-title-text {
+                font-size: 0.9rem;
             }
 
             .video-card .card-subtitle {
                 text-align: left;
                 min-width: auto;
+                font-size: 0.8rem;
             }
 
             .video-info-content {
@@ -431,6 +465,47 @@
 
             .info-section-title {
                 font-size: 0.9rem;
+            }
+
+            .back-button {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.8rem;
+                margin-bottom: 0.75rem;
+            }
+
+            .back-button svg {
+                width: 12px;
+                height: 12px;
+            }
+
+            .card-title {
+                font-size: 0.9rem;
+            }
+
+            .card-title-text {
+                font-size: 0.9rem;
+            }
+
+            /* Breadcrumb mobile optimizations */
+            .breadcrumb {
+                padding: 0.75rem;
+                margin-bottom: 1rem;
+                flex-wrap: wrap;
+                gap: 0.25rem;
+            }
+
+            .breadcrumb-item {
+                padding: 0.2rem 0.4rem;
+                font-size: 0.8rem;
+                max-width: 150px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
+            .breadcrumb-separator {
+                margin: 0 0.25rem;
+                font-size: 0.8rem;
             }
         }
     </style>
@@ -569,7 +644,7 @@
                                 <svg class="icon video-icon" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm3 2h6v4H7V5zm8 8v2h1v-2h-1zM6 15H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 8H8v-2h2v2zm0-4H8V9h2v2zm4 4h-2v-2h2v2zm0-4h-2V9h2v2z" clip-rule="evenodd" />
                                 </svg>
-                                ${item.name}
+                                <span class="card-title-text">${item.name}</span>
                             </div>
                             <div class="card-subtitle">
                                 ${item.size}
