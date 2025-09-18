@@ -508,13 +508,260 @@
                 font-size: 0.8rem;
             }
         }
+
+        /* Settings styles */
+        .settings-btn {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius);
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: background-color 0.2s;
+        }
+
+        .settings-btn:hover {
+            background: var(--primary-hover);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            background-color: var(--surface);
+            margin: 5% auto;
+            padding: 2rem;
+            border-radius: var(--radius);
+            width: 90%;
+            max-width: 600px;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .modal-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .close {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-secondary);
+            padding: 0.25rem;
+        }
+
+        .close:hover {
+            color: var(--text-primary);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+        .codec-selector {
+            width: 100%;
+            min-height: 150px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 0.75rem;
+            background: var(--surface);
+            resize: vertical;
+        }
+
+        .codec-option {
+            display: flex;
+            align-items: center;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .codec-option:last-child {
+            border-bottom: none;
+        }
+
+        .codec-option input[type="checkbox"] {
+            margin-right: 0.75rem;
+            transform: scale(1.1);
+        }
+
+        .codec-option label {
+            cursor: pointer;
+            flex: 1;
+            font-family: 'Courier New', monospace;
+            text-transform: uppercase;
+        }
+
+        .save-btn {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.75rem 2rem;
+            border-radius: var(--radius);
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: background-color 0.2s;
+        }
+
+        .save-btn:hover {
+            background: var(--primary-hover);
+        }
+
+        .save-btn:disabled {
+            background: var(--text-secondary);
+            cursor: not-allowed;
+        }
+
+        .status-message {
+            padding: 0.75rem;
+            border-radius: var(--radius);
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .status-success {
+            background: #dcfce7;
+            color: #166534;
+            border: 1px solid #bbf7d0;
+        }
+
+        .status-error {
+            background: #fef2f2;
+            color: #dc2626;
+            border: 1px solid #fecaca;
+        }
+
+        /* Compatibility badge styles */
+        .compatibility-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            margin-left: 0.5rem;
+        }
+
+        .badge-compatible {
+            background: #dcfce7;
+            color: #166534;
+            border: 1px solid #bbf7d0;
+        }
+
+        .badge-problematic {
+            background: #fef2f2;
+            color: #dc2626;
+            border: 1px solid #fecaca;
+        }
+
+        .badge-unknown {
+            background: #f1f5f9;
+            color: #475569;
+            border: 1px solid #cbd5e1;
+        }
+
+        .video-card .card-header {
+            align-items: flex-start;
+        }
+
+        .video-card .card-title-wrapper {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        /* Dashboard styles */
+        .dashboard-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .dashboard-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .dashboard-label {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        .dashboard-stat {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .dashboard-stat:last-child {
+            border-bottom: none;
+        }
+
+        .dashboard-stat span:first-child {
+            color: var(--text-secondary);
+        }
+
+        .dashboard-stat span:last-child {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>Media Info Browser</h1>
-            <p>Analyze Media Files and Streams</p>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <div>
+                    <h1>Media Info Browser</h1>
+                    <p>Analyze Media Files and Streams</p>
+                </div>
+                <div style="display: flex; gap: 1rem;">
+                    <button id="dashboard-btn" class="settings-btn">📊 Dashboard</button>
+                    <button id="settings-btn" class="settings-btn">⚙️ Settings</button>
+                </div>
+            </div>
         </div>
 
         <div id="breadcrumb" class="breadcrumb" style="display: none;">
@@ -533,6 +780,133 @@
 
         <div id="content" class="grid">
             <!-- Content will be populated by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Settings Modal -->
+    <div id="settings-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Codec Compatibility Settings</h2>
+                <button class="close" id="close-settings">&times;</button>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label">Problematic Audio Codecs</label>
+                <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem;">
+                    Select audio codecs that cause issues in your streaming setup. Files with these codecs in the primary audio track will be flagged for remuxing.
+                </p>
+                <div id="audio-codec-selector" class="codec-selector">
+                    <!-- Audio codec checkboxes will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Problematic Video Codecs</label>
+                <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem;">
+                    Select video codecs that cause issues in your streaming setup. Files with these codecs will be flagged for remuxing.
+                </p>
+                <div id="video-codec-selector" class="codec-selector">
+                    <!-- Video codec checkboxes will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <div style="display: flex; justify-content: flex-end; gap: 1rem; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border);">
+                <button id="save-settings" class="save-btn">💾 Save Settings</button>
+            </div>
+
+            <div id="settings-status" style="display: none;"></div>
+        </div>
+    </div>
+
+    <!-- Dashboard Modal -->
+    <div id="dashboard-modal" class="modal">
+        <div class="modal-content" style="max-width: 900px;">
+            <div class="modal-header">
+                <h2 class="modal-title">Media Library Dashboard</h2>
+                <button class="close" id="close-dashboard">&times;</button>
+            </div>
+            
+            <div id="dashboard-loading" style="text-align: center; padding: 2rem;">
+                <div class="loading">Loading library analysis...</div>
+            </div>
+            
+            <div id="dashboard-content" style="display: none;">
+                <!-- Summary Cards -->
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
+                    <div class="dashboard-card">
+                        <div class="dashboard-number" id="total-files">-</div>
+                        <div class="dashboard-label">Total Files</div>
+                    </div>
+                    <div class="dashboard-card">
+                        <div class="dashboard-number" id="compatible-files">-</div>
+                        <div class="dashboard-label">Compatible</div>
+                    </div>
+                    <div class="dashboard-card">
+                        <div class="dashboard-number" id="problematic-files">-</div>
+                        <div class="dashboard-label">Need Remux</div>
+                    </div>
+                    <div class="dashboard-card">
+                        <div class="dashboard-number" id="compatibility-percentage">-</div>
+                        <div class="dashboard-label">Compatibility</div>
+                    </div>
+                </div>
+
+                <!-- Issue Breakdown -->
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
+                    <div>
+                        <h3 style="margin-bottom: 1rem; color: var(--text-primary);">Issue Breakdown</h3>
+                        <div class="dashboard-stat">
+                            <span>Audio Issues:</span>
+                            <span id="audio-issues">-</span>
+                        </div>
+                        <div class="dashboard-stat">
+                            <span>Video Issues:</span>
+                            <span id="video-issues">-</span>
+                        </div>
+                        <div class="dashboard-stat">
+                            <span>Both Issues:</span>
+                            <span id="both-issues">-</span>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 style="margin-bottom: 1rem; color: var(--text-primary);">Actions</h3>
+                        <button id="analyze-library" class="save-btn" style="margin-bottom: 0.5rem; width: 100%;">
+                            🔍 Analyze Library
+                        </button>
+                        <button id="export-csv" class="save-btn" style="margin-bottom: 0.5rem; width: 100%;">
+                            📄 Export CSV
+                        </button>
+                        <button id="refresh-analysis" class="save-btn" style="width: 100%;">
+                            🔄 Refresh Analysis
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Problematic Files List -->
+                <div>
+                    <h3 style="margin-bottom: 1rem; color: var(--text-primary);">Files Requiring Remux</h3>
+                    <div style="max-height: 300px; overflow-y: auto; border: 1px solid var(--border); border-radius: var(--radius);">
+                        <table id="problematic-files-table" style="width: 100%; border-collapse: collapse;">
+                            <thead style="background: var(--background); position: sticky; top: 0;">
+                                <tr>
+                                    <th style="padding: 0.75rem; text-align: left; border-bottom: 1px solid var(--border);">File</th>
+                                    <th style="padding: 0.75rem; text-align: left; border-bottom: 1px solid var(--border);">Issues</th>
+                                    <th style="padding: 0.75rem; text-align: left; border-bottom: 1px solid var(--border);">Size</th>
+                                </tr>
+                            </thead>
+                            <tbody id="problematic-files-body">
+                                <!-- Will be populated by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div id="dashboard-error" style="display: none; text-align: center; padding: 2rem; color: var(--text-secondary);">
+                <!-- Error message will be shown here -->
+            </div>
         </div>
     </div>
 
@@ -638,25 +1012,34 @@
                     });
 
                 } else if (item.type === 'file') {
+                    const cardId = Math.random().toString(36).substr(2, 9);
                     card.innerHTML = `
                         <div class="card-header">
                             <div class="card-title">
-                                <svg class="icon video-icon" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm3 2h6v4H7V5zm8 8v2h1v-2h-1zM6 15H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 8H8v-2h2v2zm0-4H8V9h2v2zm4 4h-2v-2h2v2zm0-4h-2V9h2v2z" clip-rule="evenodd" />
-                                </svg>
-                                <span class="card-title-text">${item.name}</span>
+                                <div class="card-title-wrapper">
+                                    <svg class="icon video-icon" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm3 2h6v4H7V5zm8 8v2h1v-2h-1zM6 15H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 8H8v-2h2v2zm0-4H8V9h2v2zm4 4h-2v-2h2v2zm0-4h-2V9h2v2z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span class="card-title-text">${item.name}</span>
+                                    <span id="badge-${cardId}" class="compatibility-badge badge-unknown" style="display: none;">
+                                        Checking...
+                                    </span>
+                                </div>
                             </div>
                             <div class="card-subtitle">
                                 ${item.size}
                             </div>
                         </div>
-                        <div class="video-info" id="info-${Math.random().toString(36).substr(2, 9)}">
+                        <div class="video-info" id="info-${cardId}">
                             <div class="loading">Loading video information...</div>
                         </div>
                     `;
 
                     const infoDiv = card.querySelector('.video-info');
-                    const infoId = infoDiv.id;
+                    const badgeDiv = card.querySelector(`#badge-${cardId}`);
+
+                    // Load compatibility info in background
+                    this.loadCompatibilityInfo(item.path, badgeDiv);
 
                     card.addEventListener('click', async () => {
                         if (infoDiv.style.display === 'block') {
@@ -683,6 +1066,41 @@
                 }
 
                 return card;
+            }
+
+            async loadCompatibilityInfo(filePath, badgeElement) {
+                try {
+                    const response = await fetch(`/api/video-info?path=${encodeURIComponent(filePath)}`);
+                    const videoInfo = await response.json();
+                    
+                    if (response.ok && videoInfo.compatibility) {
+                        const compatibility = videoInfo.compatibility;
+                        
+                        if (compatibility.needs_remux) {
+                            const issues = [];
+                            if (compatibility.primary_audio_problematic) {
+                                issues.push(compatibility.primary_audio_codec);
+                            }
+                            if (compatibility.video_problematic) {
+                                issues.push(compatibility.video_codec);
+                            }
+                            
+                            badgeElement.textContent = `⚠️ ${issues.join(' + ')}`;
+                            badgeElement.className = 'compatibility-badge badge-problematic';
+                        } else {
+                            badgeElement.textContent = '✓ Compatible';
+                            badgeElement.className = 'compatibility-badge badge-compatible';
+                        }
+                        
+                        badgeElement.style.display = 'inline-flex';
+                    } else {
+                        // Hide badge if we can't determine compatibility
+                        badgeElement.style.display = 'none';
+                    }
+                } catch (error) {
+                    // Hide badge on error
+                    badgeElement.style.display = 'none';
+                }
             }
 
             renderVideoInfo(container, info) {
@@ -944,9 +1362,400 @@
             }
         }
 
+        // Settings functionality
+        class SettingsManager {
+            constructor() {
+                this.modal = document.getElementById('settings-modal');
+                this.config = null;
+                this.availableCodecs = null;
+                this.initializeEventListeners();
+                this.loadConfig();
+            }
+
+            initializeEventListeners() {
+                // Settings button
+                document.getElementById('settings-btn').addEventListener('click', () => {
+                    this.openModal();
+                });
+
+                // Close modal
+                document.getElementById('close-settings').addEventListener('click', () => {
+                    this.closeModal();
+                });
+
+                // Close modal when clicking outside
+                this.modal.addEventListener('click', (e) => {
+                    if (e.target === this.modal) {
+                        this.closeModal();
+                    }
+                });
+
+                // Save settings
+                document.getElementById('save-settings').addEventListener('click', () => {
+                    this.saveSettings();
+                });
+            }
+
+            async loadConfig() {
+                try {
+                    // Load current config
+                    const configResponse = await fetch('/api/config');
+                    this.config = await configResponse.json();
+
+                    // Load available codecs
+                    const codecsResponse = await fetch('/api/available-codecs');
+                    this.availableCodecs = await codecsResponse.json();
+
+                    this.populateCodecSelectors();
+                } catch (error) {
+                    console.error('Error loading configuration:', error);
+                    this.showStatus('Error loading configuration', 'error');
+                }
+            }
+
+            populateCodecSelectors() {
+                // Populate audio codec selector
+                const audioSelector = document.getElementById('audio-codec-selector');
+                audioSelector.innerHTML = '';
+
+                this.availableCodecs.audio.forEach(codec => {
+                    const isChecked = this.config.problematic_codecs.audio.includes(codec);
+                    const optionDiv = document.createElement('div');
+                    optionDiv.className = 'codec-option';
+                    optionDiv.innerHTML = `
+                        <input type="checkbox" id="audio-${codec}" ${isChecked ? 'checked' : ''}>
+                        <label for="audio-${codec}">${codec}</label>
+                    `;
+                    audioSelector.appendChild(optionDiv);
+                });
+
+                // Populate video codec selector
+                const videoSelector = document.getElementById('video-codec-selector');
+                videoSelector.innerHTML = '';
+
+                this.availableCodecs.video.forEach(codec => {
+                    const isChecked = this.config.problematic_codecs.video.includes(codec);
+                    const optionDiv = document.createElement('div');
+                    optionDiv.className = 'codec-option';
+                    optionDiv.innerHTML = `
+                        <input type="checkbox" id="video-${codec}" ${isChecked ? 'checked' : ''}>
+                        <label for="video-${codec}">${codec}</label>
+                    `;
+                    videoSelector.appendChild(optionDiv);
+                });
+            }
+
+            openModal() {
+                this.modal.style.display = 'block';
+                this.hideStatus();
+            }
+
+            closeModal() {
+                this.modal.style.display = 'none';
+                this.hideStatus();
+            }
+
+            async saveSettings() {
+                const saveBtn = document.getElementById('save-settings');
+                saveBtn.disabled = true;
+                saveBtn.textContent = '💾 Saving...';
+
+                try {
+                    // Collect selected audio codecs
+                    const audioCodecs = [];
+                    document.querySelectorAll('#audio-codec-selector input[type="checkbox"]:checked').forEach(checkbox => {
+                        const codec = checkbox.id.replace('audio-', '');
+                        audioCodecs.push(codec);
+                    });
+
+                    // Collect selected video codecs
+                    const videoCodecs = [];
+                    document.querySelectorAll('#video-codec-selector input[type="checkbox"]:checked').forEach(checkbox => {
+                        const codec = checkbox.id.replace('video-', '');
+                        videoCodecs.push(codec);
+                    });
+
+                    // Update config
+                    const newConfig = {
+                        ...this.config,
+                        problematic_codecs: {
+                            audio: audioCodecs,
+                            video: videoCodecs
+                        }
+                    };
+
+                    // Save to server
+                    const response = await fetch('/api/config', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(newConfig)
+                    });
+
+                    const result = await response.json();
+
+                    if (response.ok) {
+                        this.config = newConfig;
+                        this.showStatus('Settings saved successfully!', 'success');
+                        
+                        // Optionally reload the current view to show updated compatibility status
+                        setTimeout(() => {
+                            window.location.reload();
+                        }, 1500);
+                    } else {
+                        throw new Error(result.error || 'Failed to save settings');
+                    }
+                } catch (error) {
+                    console.error('Error saving settings:', error);
+                    this.showStatus(`Error saving settings: ${error.message}`, 'error');
+                } finally {
+                    saveBtn.disabled = false;
+                    saveBtn.textContent = '💾 Save Settings';
+                }
+            }
+
+            showStatus(message, type) {
+                const statusDiv = document.getElementById('settings-status');
+                statusDiv.textContent = message;
+                statusDiv.className = `status-message status-${type}`;
+                statusDiv.style.display = 'block';
+            }
+
+            hideStatus() {
+                const statusDiv = document.getElementById('settings-status');
+                statusDiv.style.display = 'none';
+            }
+        }
+
+        // Dashboard functionality
+        class DashboardManager {
+            constructor() {
+                this.modal = document.getElementById('dashboard-modal');
+                this.initializeEventListeners();
+            }
+
+            initializeEventListeners() {
+                // Dashboard button
+                document.getElementById('dashboard-btn').addEventListener('click', () => {
+                    this.openModal();
+                });
+
+                // Close modal
+                document.getElementById('close-dashboard').addEventListener('click', () => {
+                    this.closeModal();
+                });
+
+                // Close modal when clicking outside
+                this.modal.addEventListener('click', (e) => {
+                    if (e.target === this.modal) {
+                        this.closeModal();
+                    }
+                });
+
+                // Analyze library
+                document.getElementById('analyze-library').addEventListener('click', () => {
+                    this.loadAnalysis(false); // Always do full analysis
+                });
+
+                // Refresh analysis
+                document.getElementById('refresh-analysis').addEventListener('click', () => {
+                    this.loadAnalysis(false); // Always do full analysis
+                });
+
+                // Export CSV
+                document.getElementById('export-csv').addEventListener('click', () => {
+                    this.exportCSV();
+                });
+            }
+
+            openModal() {
+                this.modal.style.display = 'block';
+                // Start analysis automatically
+                this.loadAnalysis();
+            }
+
+            closeModal() {
+                this.modal.style.display = 'none';
+            }
+
+            async loadAnalysis() {
+                const loadingDiv = document.getElementById('dashboard-loading');
+                const contentDiv = document.getElementById('dashboard-content');
+                const errorDiv = document.getElementById('dashboard-error');
+
+                // Show loading
+                loadingDiv.style.display = 'block';
+                contentDiv.style.display = 'none';
+                errorDiv.style.display = 'none';
+
+                // Create or update progress display
+                let progressText = loadingDiv.querySelector('.loading');
+                let progressDetail = loadingDiv.querySelector('.progress-detail');
+                
+                if (!progressDetail) {
+                    progressDetail = document.createElement('div');
+                    progressDetail.className = 'progress-detail';
+                    progressDetail.style.cssText = 'margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-secondary);';
+                    loadingDiv.appendChild(progressDetail);
+                }
+
+                try {
+                    // Use Server-Sent Events for real-time progress
+                    const eventSource = new EventSource('/api/bulk-analysis-progress');
+                    
+                    eventSource.onmessage = (event) => {
+                        const data = JSON.parse(event.data);
+                        
+                        switch (data.status) {
+                            case 'starting':
+                                progressText.textContent = 'Starting analysis...';
+                                progressDetail.textContent = data.message;
+                                break;
+                                
+                            case 'progress':
+                                const percentage = Math.round((data.current_file / data.total_files) * 100);
+                                progressText.textContent = `Analyzing library... ${percentage}%`;
+                                progressDetail.textContent = `${data.current_file}/${data.total_files} - ${data.current_filename || 'Processing...'}`;
+                                break;
+                                
+                            case 'complete':
+                                progressText.textContent = 'Analysis complete!';
+                                progressDetail.textContent = `Processed ${data.total_files} files`;
+                                
+                                // Display results
+                                this.displayAnalysis(data);
+                                
+                                // Show content
+                                contentDiv.style.display = 'block';
+                                loadingDiv.style.display = 'none';
+                                
+                                eventSource.close();
+                                break;
+                                
+                            case 'error':
+                                throw new Error(data.message);
+                        }
+                    };
+                    
+                    eventSource.onerror = (error) => {
+                        eventSource.close();
+                        throw new Error('Connection to server lost');
+                    };
+                    
+                } catch (error) {
+                    console.error('Analysis error:', error);
+                    errorDiv.style.display = 'block';
+                    loadingDiv.style.display = 'none';
+                    
+                    // Find or create error message element
+                    let errorMessage = errorDiv.querySelector('.error-message');
+                    if (!errorMessage) {
+                        errorMessage = errorDiv;
+                    }
+                    errorMessage.textContent = `Error: ${error.message}`;
+                }
+            }
+
+            displayAnalysis(data) {
+                // Update summary cards
+                document.getElementById('total-files').textContent = data.total_files;
+                document.getElementById('compatible-files').textContent = data.compatible_files;
+                document.getElementById('problematic-files').textContent = data.problematic_files;
+                document.getElementById('compatibility-percentage').textContent = `${data.compatibility_percentage}%`;
+
+                // Update issue breakdown
+                document.getElementById('audio-issues').textContent = data.audio_issues;
+                document.getElementById('video-issues').textContent = data.video_issues;
+                document.getElementById('both-issues').textContent = data.both_issues;
+
+                // Update problematic files table
+                this.updateProblematicFilesTable(data.problematic_files_list);
+
+                // Store data for export
+                this.analysisData = data;
+            }
+
+            updateProblematicFilesTable(files) {
+                const tbody = document.getElementById('problematic-files-body');
+                tbody.innerHTML = '';
+
+                if (files.length === 0) {
+                    const row = tbody.insertRow();
+                    const cell = row.insertCell();
+                    cell.colSpan = 3;
+                    cell.style.textAlign = 'center';
+                    cell.style.padding = '2rem';
+                    cell.style.color = 'var(--text-secondary)';
+                    cell.textContent = '🎉 No problematic files found!';
+                    return;
+                }
+
+                files.forEach(file => {
+                    const row = tbody.insertRow();
+                    
+                    // File name
+                    const nameCell = row.insertCell();
+                    nameCell.style.padding = '0.75rem';
+                    nameCell.style.borderBottom = '1px solid var(--border)';
+                    nameCell.textContent = file.name;
+                    nameCell.title = file.path;
+                    
+                    // Issues
+                    const issuesCell = row.insertCell();
+                    issuesCell.style.padding = '0.75rem';
+                    issuesCell.style.borderBottom = '1px solid var(--border)';
+                    issuesCell.innerHTML = `<span style="font-family: monospace; background: var(--background); padding: 0.25rem 0.5rem; border-radius: 4px;">${file.issues.join(' + ')}</span>`;
+                    
+                    // Size
+                    const sizeCell = row.insertCell();
+                    sizeCell.style.padding = '0.75rem';
+                    sizeCell.style.borderBottom = '1px solid var(--border)';
+                    sizeCell.style.textAlign = 'right';
+                    sizeCell.textContent = file.size;
+                });
+            }
+
+            exportCSV() {
+                if (!this.analysisData || !this.analysisData.problematic_files_list) {
+                    alert('No data to export');
+                    return;
+                }
+
+                const files = this.analysisData.problematic_files_list;
+                
+                // Create CSV content
+                const headers = ['File Name', 'Path', 'Audio Codec', 'Video Codec', 'Issues', 'Size'];
+                const csvContent = [
+                    headers.join(','),
+                    ...files.map(file => [
+                        `"${file.name}"`,
+                        `"${file.path}"`,
+                        `"${file.audio_codec || ''}"`,
+                        `"${file.video_codec || ''}"`,
+                        `"${file.issues.join(' + ')}"`,
+                        `"${file.size}"`
+                    ].join(','))
+                ].join('\n');
+
+                // Download CSV
+                const blob = new Blob([csvContent], { type: 'text/csv' });
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `mediainfo-problematic-files-${new Date().toISOString().split('T')[0]}.csv`;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                window.URL.revokeObjectURL(url);
+            }
+        }
+
         // Initialize the app when the page loads
         document.addEventListener('DOMContentLoaded', () => {
             new MediaBrowser();
+            new SettingsManager();
+            new DashboardManager();
         });
     </script>
 </body>

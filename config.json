@@ -1,0 +1,14 @@
+{
+  "problematic_codecs": {
+    "audio": [
+      "dts",
+      "dts-hd",
+      "truehd",
+      "flac",
+      "pcm_s16le",
+      "pcm_s24le"
+    ],
+    "video": []
+  },
+  "version": "1.0"
+}
