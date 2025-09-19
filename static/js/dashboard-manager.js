@@ -113,14 +113,16 @@ class DashboardManager {
         cacheInfo.innerHTML = `
             <span>📊 Showing cached analysis from ${lastAnalyzed}</span>
             <button id="force-refresh" style="
-                background: var(--accent);
+                background: var(--primary-color);
                 color: white;
                 border: none;
                 padding: 0.5rem 1rem;
                 border-radius: 4px;
                 font-size: 0.85rem;
                 cursor: pointer;
-            ">Refresh Analysis</button>
+                transition: background 0.2s;
+            " onmouseover="this.style.background='var(--primary-hover)'" 
+               onmouseout="this.style.background='var(--primary-color)'">Refresh Analysis</button>
         `;
         
         // Insert at the beginning of content

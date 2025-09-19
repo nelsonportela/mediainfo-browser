@@ -5,7 +5,7 @@
     --surface: #ffffff;
     --text-primary: #1e293b;
     --text-secondary: #64748b;
-    /* --border: #e2e8f0; */
+    --border: #e2e8f0;
     --border-hover: #cbd5e1;
     --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
     --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
