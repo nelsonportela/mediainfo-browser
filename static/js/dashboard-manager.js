@@ -23,11 +23,6 @@ class DashboardManager {
             }
         });
 
-        // Analyze library
-        document.getElementById('analyze-library').addEventListener('click', () => {
-            this.loadAnalysis();
-        });
-
         // Export CSV
         document.getElementById('export-csv').addEventListener('click', () => {
             this.exportCSV();

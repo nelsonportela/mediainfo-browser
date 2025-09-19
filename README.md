@@ -1,6 +1,6 @@
 # Media Info Web Browser
 
-> **⚠️ Disclaimer**: This application is completely "vibe coded" - meaning an AI did all the heavy lifting while a human occasionally said "make it work" and "add more features." The result is a surprisingly functional codec compatibility analyzer that somehow evolved from a simple file browser. If you find any questionable design decisions, blame the robots! 🤖⚡
+> **⚠️ Disclaimer**: This application is completely "vibe coded" (yes, including this disclaimer) - meaning an AI did all the heavy lifting while a human occasionally said "make it work" and "add more features." The result is a surprisingly functional codec compatibility analyzer that somehow evolved from a simple file browser. If you find any questionable design decisions, blame the robots! 🤖⚡
 
 A clean and modern web UI for browsing video files and analyzing their codec compatibility for streaming devices like Fire TV Stick, with real-time analysis and smart caching.
 
