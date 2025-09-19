@@ -1,17 +1,39 @@
 # Media Info Web Browser
 
-A clean and minimal web UI for browsing video files and displaying their metadata using ffprobe.
+> **⚠️ Disclaimer**: This application is completely "vibe coded" - meaning an AI did all the heavy lifting while a human occasionally said "make it work" and "add more features." The result is a surprisingly functional codec compatibility analyzer that somehow evolved from a simple file browser. If you find any questionable design decisions, blame the robots! 🤖⚡
 
-## Features
+A clean and modern web UI for browsing video files and analyzing their codec compatibility for streaming devices like Fire TV Stick, with real-time analysis and smart caching.
 
-- 🎬 Browse video files and folders with a clean, modern interface
-- 📊 Display detailed video metadata (codec, resolution, duration, bitrate, etc.)
-- � Multiple audio track support with channel information
-- 📝 Subtitle track detection (embedded and external files)
-- �📱 Responsive design that works on desktop and mobile
-- 🗂️ Folder navigation with breadcrumb support
-- 🎯 Support for common video formats (MP4, MKV, AVI, MOV, etc.)
-- 🐳 Docker support for easy deployment
+## ✨ Key Features
+
+- 🎬 **Media Browser**: Clean, responsive interface for browsing video files and folders
+- 📊 **Codec Analysis**: Comprehensive compatibility checking for streaming devices
+- ⚡ **Smart Caching**: Instant dashboard loading with server-side cache persistence
+- � **Real-time Progress**: Live progress updates during bulk library analysis
+- 🎯 **Compatibility Focus**: Specifically designed for Jellyfin → Fire Stick streaming pipelines
+- 📱 **Mobile Friendly**: Responsive design that works everywhere
+- 🐳 **Docker Ready**: Complete containerization with automated builds
+- 📋 **Export Support**: CSV export of problematic files for further analysis
+
+## 🚀 New in v1.1.x
+
+### Smart Caching System
+- **Instant Loading**: Dashboard shows cached results immediately (no waiting!)
+- **Cross-Device**: Server-side cache works across all devices
+- **Manual Refresh**: Clean refresh button when you need fresh data
+- **Persistent**: Cache survives server restarts
+
+### Modular Architecture
+- **90% HTML Reduction**: Cleaned up from 1,762 to 175 lines
+- **Organized Structure**: Separate CSS, JavaScript, and HTML files
+- **Better Maintainability**: Clean separation of concerns
+- **Enhanced Performance**: Optimized loading and real-time updates
+
+### Enhanced Analysis
+- **Two-Line Progress**: File count and current filename on separate lines
+- **Detailed Statistics**: Comprehensive codec breakdown and compatibility metrics
+- **Issue Categorization**: Audio, video, and combined compatibility problems
+- **Size Information**: File sizes included in problematic files list
 
 ## Quick Start with Docker (Recommended)
 
@@ -32,7 +54,8 @@ docker build -t mediainfo-browser:latest .
 
 Or use the pre-built image from Docker Hub:
 ```bash
-docker pull nelsonportela/mediainfo-browser:latest
+docker pull fuguone/mediainfo-browser:latest
+# Latest stable: v1.1.1 (includes smart caching and modular architecture)
 ```
 
 ### 3. Configure Media Path
@@ -50,6 +73,27 @@ docker-compose up -d
 ### 5. Access
 - Local: http://localhost:5000
 - Network: http://your-server-ip:5000
+
+## 🎯 Codec Compatibility Analysis
+
+This application is specifically designed to identify problematic audio/video codecs that may cause issues when streaming from Jellyfin to devices like Fire TV Stick.
+
+### Supported Analysis
+- **Audio Codec Issues**: DTS, DTS-HD, TrueHD, FLAC, PCM variants
+- **Video Codec Issues**: Configurable (prepared for future expansion)
+- **Bulk Library Analysis**: Scan entire media library with real-time progress
+- **Statistical Overview**: Compatibility percentages and issue breakdowns
+- **Export Functionality**: CSV export of problematic files
+
+### How It Works
+1. **Browse Your Library**: Navigate through your media folders
+2. **Individual Analysis**: Click any video file to see detailed codec information
+3. **Bulk Analysis**: Use the Dashboard for comprehensive library scanning
+4. **Smart Caching**: Results are cached for instant subsequent access
+5. **Export Results**: Download CSV reports of files needing attention
+
+### Use Case: Jellyfin Streaming Pipeline
+Perfect for identifying which files in your library need transcoding or remuxing for optimal streaming performance to Fire TV Stick and similar devices.
 
 ## Manual Installation
 
@@ -145,7 +189,7 @@ FLASK_ENV=production
 ### Building and Deployment
 ```bash
 # Pull latest image from Docker Hub
-docker pull nelsonportela/mediainfo-browser:latest
+docker pull fuguone/mediainfo-browser:latest
 
 # Or build locally for development
 docker build -t mediainfo-browser:latest .
@@ -163,22 +207,36 @@ docker-compose ps
 docker-compose down
 
 # Update to latest version
-docker pull nelsonportela/mediainfo-browser:latest && docker-compose up -d
+docker pull fuguone/mediainfo-browser:latest && docker-compose up -d
 ```
 
 ## Features Overview
 
-### Folder View
-- Shows folders with recursive video file counts
-- Clean card-based layout
-- Breadcrumb navigation
+### Smart Dashboard
+- **Instant Loading**: Cached analysis results load immediately
+- **Real-time Progress**: Live updates during library analysis with file count and current filename
+- **Cache Management**: Shows when analysis was last performed with manual refresh option
+- **Export Options**: Download CSV reports of problematic files
 
-### Video File Information
+### Codec Compatibility Analysis
+- **Bulk Library Scanning**: Analyze entire media library for streaming compatibility
+- **Issue Categorization**: Separate audio, video, and combined compatibility problems
+- **Statistical Overview**: Compatibility percentages and detailed breakdowns
+- **Problematic Files List**: Detailed list with file paths, issues, and sizes
+
+### Individual File Analysis
 Click on any video file to see:
 - **General**: Duration, file size, bitrate, container format
 - **Video Stream**: Codec, resolution, frame rate, profile
 - **Audio Tracks**: Multiple tracks with codec, channels, sample rate
+- **Compatibility**: Streaming device compatibility assessment
 - **Subtitles**: Embedded and external subtitle files
+
+### Folder View
+- Shows folders with recursive video file counts
+- Clean card-based layout with file statistics
+- Breadcrumb navigation
+- Responsive design for all screen sizes
 
 ### Navigation
 - Breadcrumb navigation
@@ -193,7 +251,31 @@ Click on any video file to see:
 - Container runs as non-root user
 - Media directory mounted as read-only in Docker
 
+## 💾 Cache System
+
+### How Caching Works
+- **Server-Side Storage**: Analysis results stored in `analysis_cache.json`
+- **Instant Access**: Dashboard loads cached data immediately
+- **Cross-Device**: Same cache accessible from all devices
+- **Persistence**: Cache survives server restarts
+- **Manual Control**: Refresh button forces new analysis when needed
+
+### Cache Management
+- **Automatic**: Results automatically cached after each analysis
+- **Validation**: Cache validates against media root changes
+- **Refresh**: Manual refresh bypasses cache for fresh analysis
+- **Storage**: Lightweight JSON format with timestamps
+
 ## Troubleshooting
+
+### Cache Issues
+```bash
+# Clear cache if corrupted
+rm analysis_cache.json
+
+# Force fresh analysis
+# Use the "Refresh Analysis" button in the dashboard
+```
 
 ### FFprobe not found
 Make sure FFmpeg is installed and `ffprobe` is available in your system PATH.
@@ -209,6 +291,11 @@ Check logs with: `docker-compose logs mediainfo`
 
 ### Network access issues
 Ensure port 5000 is not blocked by firewall and is available.
+
+### Dashboard loading issues
+- Check browser console for JavaScript errors
+- Verify all static files (CSS/JS) are properly served
+- Clear browser cache and reload
 
 ## Development
 
