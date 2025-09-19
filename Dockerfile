@@ -15,6 +15,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy application files
 COPY app.py .
 COPY templates/ templates/
+COPY static/ static/
 
 # Create a non-root user for security
 RUN adduser -D -u 1000 mediauser && chown -R mediauser:mediauser /app
