@@ -7,6 +7,7 @@ A clean and minimal web UI for browsing video files and displaying their metadat
 import os
 import json
 import subprocess
+import time
 from pathlib import Path
 from flask import Flask, render_template, jsonify, request
 from urllib.parse import unquote
@@ -23,6 +24,7 @@ SUPPORTED_EXTENSIONS = {'.mp4', '.mkv', '.avi', '.mov', '.wmv', '.flv', '.webm',
 
 # Configuration file for codec compatibility
 CONFIG_FILE = os.getenv('CONFIG_FILE', 'config.json')
+CACHE_FILE = os.getenv('CACHE_FILE', 'analysis_cache.json')
 
 def load_codec_config():
     """Load codec compatibility configuration from file."""
@@ -95,6 +97,55 @@ def get_primary_audio_track(audio_tracks):
 
 # Load configuration at startup
 CODEC_CONFIG = load_codec_config()
+
+def load_analysis_cache():
+    """Load cached analysis results from file."""
+    try:
+        if os.path.exists(CACHE_FILE):
+            with open(CACHE_FILE, 'r') as f:
+                return json.load(f)
+    except Exception as e:
+        print(f"Warning: Failed to load analysis cache: {e}")
+    
+    return None
+
+def save_analysis_cache(analysis_data):
+    """Save analysis results to cache file."""
+    try:
+        cache_data = {
+            'timestamp': time.time(),
+            'analysis': analysis_data,
+            'media_root': MEDIA_ROOT  # Store path for validation
+        }
+        
+        with open(CACHE_FILE, 'w') as f:
+            json.dump(cache_data, f, indent=2)
+        
+        return True
+    except Exception as e:
+        print(f"Warning: Failed to save analysis cache: {e}")
+        return False
+
+def is_cache_valid(cache_data):
+    """Check if cached analysis is still valid."""
+    if not cache_data:
+        return False
+    
+    # Check if media root has changed
+    if cache_data.get('media_root') != MEDIA_ROOT:
+        return False
+    
+    # Cache is valid (we're not implementing time-based expiry as requested)
+    return True
+
+def file_needs_reanalysis(file_path, cached_file_data):
+    """Check if a file needs to be re-analyzed based on modification time."""
+    try:
+        current_mtime = os.path.getmtime(file_path)
+        cached_mtime = cached_file_data.get('mtime', 0)
+        return current_mtime > cached_mtime
+    except (OSError, KeyError):
+        return True  # Re-analyze if we can't determine
 
 def get_video_info(file_path):
     """Extract comprehensive video metadata using ffprobe."""
@@ -668,9 +719,33 @@ def bulk_analysis():
     except Exception as e:
         return jsonify({'error': f'Bulk analysis failed: {str(e)}'}), 500
 
+@app.route('/api/cached-analysis')
+def cached_analysis():
+    """API endpoint to return cached analysis results if available."""
+    try:
+        cache_data = load_analysis_cache()
+        
+        if cache_data and is_cache_valid(cache_data):
+            # Return cached data with additional metadata
+            response_data = cache_data['analysis'].copy()
+            response_data.update({
+                'has_cache': True,
+                'cache_timestamp': cache_data['timestamp']
+            })
+            return jsonify(response_data)
+        else:
+            # No valid cache available
+            return jsonify({'has_cache': False})
+            
+    except Exception as e:
+        return jsonify({'has_cache': False, 'error': str(e)}), 500
+
 @app.route('/api/bulk-analysis-progress')
 def bulk_analysis_progress():
     """API endpoint for bulk media library analysis with progress updates via Server-Sent Events."""
+    # Check if this is a forced refresh (must be outside the generator)
+    force_refresh = request.args.get('force', 'false').lower() == 'true'
+    
     def generate_progress():
         try:
             yield "data: " + json.dumps({'status': 'starting', 'message': 'Scanning for video files...'}) + "\n\n"
@@ -678,6 +753,17 @@ def bulk_analysis_progress():
             # Scan for all video files
             video_files = scan_media_files_recursive(MEDIA_ROOT)
             total_files = len(video_files)
+            
+            # Load existing cache for incremental analysis (unless forced)
+            cached_analysis = None
+            files_to_analyze = video_files
+            
+            if not force_refresh:
+                cached_analysis = load_analysis_cache()
+                if cached_analysis and is_cache_valid(cached_analysis):
+                    # For simplicity in this implementation, we'll still analyze all files
+                    # but we could optimize this further to only analyze changed files
+                    pass
             
             yield "data: " + json.dumps({
                 'status': 'progress', 
@@ -702,7 +788,7 @@ def bulk_analysis_progress():
             }
             
             # Analyze each file with progress updates
-            for index, file_path in enumerate(video_files, 1):
+            for index, file_path in enumerate(files_to_analyze, 1):
                 try:
                     # Send progress update
                     filename = os.path.basename(file_path)
@@ -774,6 +860,9 @@ def bulk_analysis_progress():
                 stats['compatibility_percentage'] = round((stats['compatible_files'] / stats['total_files']) * 100, 1)
             else:
                 stats['compatibility_percentage'] = 0
+            
+            # Save results to cache
+            save_analysis_cache(stats)
             
             # Send final results
             yield "data: " + json.dumps({

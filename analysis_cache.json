@@ -1,0 +1,765 @@
+{
+  "timestamp": 1758268665.278663,
+  "analysis": {
+    "total_files": 1177,
+    "compatible_files": 1104,
+    "problematic_files": 73,
+    "audio_issues": 73,
+    "video_issues": 0,
+    "both_issues": 0,
+    "codec_breakdown": {
+      "audio": {
+        "aac": 854,
+        "flac": 13,
+        "opus": 20,
+        "eac3": 74,
+        "ac3": 151,
+        "mp3": 5,
+        "dts": 60
+      },
+      "video": {
+        "h264": 995,
+        "hevc": 69,
+        "wmv3": 2,
+        "mpeg4": 27,
+        "png": 26,
+        "vp9": 4,
+        "mjpeg": 54
+      }
+    },
+    "problematic_files_list": [
+      {
+        "path": "anime/Himouto! Umaru-chan/Season 1/Himouto! Umaru-chan - S01E01 - Umaru and Her Brother Bluray-1080p.mkv",
+        "name": "Himouto! Umaru-chan - S01E01 - Umaru and Her Brother Bluray-1080p.mkv",
+        "issues": [
+          "FLAC"
+        ],
+        "audio_codec": "FLAC",
+        "video_codec": "H264",
+        "size": "1.3 GB"
+      },
+      {
+        "path": "anime/Himouto! Umaru-chan/Season 1/Himouto! Umaru-chan - S01E02 - Umaru and Ebina Bluray-1080p.mkv",
+        "name": "Himouto! Umaru-chan - S01E02 - Umaru and Ebina Bluray-1080p.mkv",
+        "issues": [
+          "FLAC"
+        ],
+        "audio_codec": "FLAC",
+        "video_codec": "H264",
+        "size": "1.2 GB"
+      },
+      {
+        "path": "anime/Himouto! Umaru-chan/Season 1/Himouto! Umaru-chan - S01E03 - Umaru and Her Disciple Bluray-1080p.mkv",
+        "name": "Himouto! Umaru-chan - S01E03 - Umaru and Her Disciple Bluray-1080p.mkv",
+        "issues": [
+          "FLAC"
+        ],
+        "audio_codec": "FLAC",
+        "video_codec": "H264",
+        "size": "1.1 GB"
+      },
+      {
+        "path": "anime/Himouto! Umaru-chan/Season 1/Himouto! Umaru-chan - S01E04 - Umaru and Her Rival Bluray-1080p.mkv",
+        "name": "Himouto! Umaru-chan - S01E04 - Umaru and Her Rival Bluray-1080p.mkv",
+        "issues": [
+          "FLAC"
+        ],
+        "audio_codec": "FLAC",
+        "video_codec": "H264",
+        "size": "1.3 GB"
+      },
+      {
+        "path": "anime/Himouto! Umaru-chan/Season 1/Himouto! Umaru-chan - S01E05 - Umaru and Summer Vacation Bluray-1080p.mkv",
+        "name": "Himouto! Umaru-chan - S01E05 - Umaru and Summer Vacation Bluray-1080p.mkv",
+        "issues": [
+          "FLAC"
+        ],
+        "audio_codec": "FLAC",
+        "video_codec": "H264",
+        "size": "1.0 GB"
+      },
+      {
+        "path": "anime/Himouto! Umaru-chan/Season 1/Himouto! Umaru-chan - S01E06 - Umaru\u2019s Birthday Bluray-1080p.mkv",
+        "name": "Himouto! Umaru-chan - S01E06 - Umaru\u2019s Birthday Bluray-1080p.mkv",
+        "issues": [
+          "FLAC"
+        ],
+        "audio_codec": "FLAC",
+        "video_codec": "H264",
+        "size": "1.0 GB"
+      },
+      {
+        "path": "anime/Himouto! Umaru-chan/Season 1/Himouto! Umaru-chan - S01E07 - Umaru\u2019s Big Brother Bluray-1080p.mkv",
+        "name": "Himouto! Umaru-chan - S01E07 - Umaru\u2019s Big Brother Bluray-1080p.mkv",
+        "issues": [
+          "FLAC"
+        ],
+        "audio_codec": "FLAC",
+        "video_codec": "H264",
+        "size": "1014.0 MB"
+      },
+      {
+        "path": "anime/Himouto! Umaru-chan/Season 1/Himouto! Umaru-chan - S01E08 - Umaru and Christmas and New Year's Bluray-1080p.mkv",
+        "name": "Himouto! Umaru-chan - S01E08 - Umaru and Christmas and New Year's Bluray-1080p.mkv",
+        "issues": [
+          "FLAC"
+        ],
+        "audio_codec": "FLAC",
+        "video_codec": "H264",
+        "size": "947.5 MB"
+      },
+      {
+        "path": "anime/Himouto! Umaru-chan/Season 1/Himouto! Umaru-chan - S01E09 - Umaru and Valentine\u2019s Bluray-1080p.mkv",
+        "name": "Himouto! Umaru-chan - S01E09 - Umaru and Valentine\u2019s Bluray-1080p.mkv",
+        "issues": [
+          "FLAC"
+        ],
+        "audio_codec": "FLAC",
+        "video_codec": "H264",
+        "size": "1.2 GB"
+      },
+      {
+        "path": "anime/Himouto! Umaru-chan/Season 1/Himouto! Umaru-chan - S01E10 - Umaru and Now and Once Upon a Time Bluray-1080p.mkv",
+        "name": "Himouto! Umaru-chan - S01E10 - Umaru and Now and Once Upon a Time Bluray-1080p.mkv",
+        "issues": [
+          "FLAC"
+        ],
+        "audio_codec": "FLAC",
+        "video_codec": "H264",
+        "size": "1.1 GB"
+      },
+      {
+        "path": "anime/Himouto! Umaru-chan/Season 1/Himouto! Umaru-chan - S01E11 - Umaru's Everyday Life Bluray-1080p.mkv",
+        "name": "Himouto! Umaru-chan - S01E11 - Umaru's Everyday Life Bluray-1080p.mkv",
+        "issues": [
+          "FLAC"
+        ],
+        "audio_codec": "FLAC",
+        "video_codec": "H264",
+        "size": "1003.1 MB"
+      },
+      {
+        "path": "anime/Himouto! Umaru-chan/Season 1/Himouto! Umaru-chan - S01E12 - Umaru and Everyone Bluray-1080p.mkv",
+        "name": "Himouto! Umaru-chan - S01E12 - Umaru and Everyone Bluray-1080p.mkv",
+        "issues": [
+          "FLAC"
+        ],
+        "audio_codec": "FLAC",
+        "video_codec": "H264",
+        "size": "653.1 MB"
+      },
+      {
+        "path": "movies/Justice League Dark - Apokolips War (2020)/Justice.League.Dark.Apokolips.War.2020.NORDiC.REMUX.1080p.BluRay.AVC.DTS-HD.MA.5.1-CDB.mkv",
+        "name": "Justice.League.Dark.Apokolips.War.2020.NORDiC.REMUX.1080p.BluRay.AVC.DTS-HD.MA.5.1-CDB.mkv",
+        "issues": [
+          "DTS"
+        ],
+        "audio_codec": "DTS",
+        "video_codec": "H264",
+        "size": "11.7 GB"
+      },
+      {
+        "path": "movies/Metal Skin Panic MADOX-01 (1987)/Metal Skin Panic MADOX-01 (1987) Bluray-1080p.mkv",
+        "name": "Metal Skin Panic MADOX-01 (1987) Bluray-1080p.mkv",
+        "issues": [
+          "FLAC"
+        ],
+        "audio_codec": "FLAC",
+        "video_codec": "HEVC",
+        "size": "1.8 GB"
+      },
+      {
+        "path": "movies/Never-Ending Man -  Hayao Miyazaki/Never-Ending Man Hayao Miyazaki (2017) HDTV-1080p.mkv",
+        "name": "Never-Ending Man Hayao Miyazaki (2017) HDTV-1080p.mkv",
+        "issues": [
+          "DTS"
+        ],
+        "audio_codec": "DTS",
+        "video_codec": "H264",
+        "size": "5.5 GB"
+      },
+      {
+        "path": "movies/Ponyo (2008)/Ponyo on the cliff by the sea 2008 1080p DTS Jap+Ned+Eng 5 1 audio en ondertitels.mkv",
+        "name": "Ponyo on the cliff by the sea 2008 1080p DTS Jap+Ned+Eng 5 1 audio en ondertitels.mkv",
+        "issues": [
+          "DTS"
+        ],
+        "audio_codec": "DTS",
+        "video_codec": "H264",
+        "size": "6.3 GB"
+      },
+      {
+        "path": "movies/Shrek in the Swamp Karaoke Dance Party (2001)/Shrek.in.the.Swamp.Karaoke.Dance.Party.2001.Bluray.REMUX.AVC.DTS-HD.MA.5.1.mkv",
+        "name": "Shrek.in.the.Swamp.Karaoke.Dance.Party.2001.Bluray.REMUX.AVC.DTS-HD.MA.5.1.mkv",
+        "issues": [
+          "DTS"
+        ],
+        "audio_codec": "DTS",
+        "video_codec": "H264",
+        "size": "527.1 MB"
+      },
+      {
+        "path": "series/Bluey (2018)/Season 1/Bluey (2018) - S01E01 - Magic Xylophone Bluray-1080p.mkv",
+        "name": "Bluey (2018) - S01E01 - Magic Xylophone Bluray-1080p.mkv",
+        "issues": [
+          "DTS"
+        ],
+        "audio_codec": "DTS",
+        "video_codec": "H264",
+        "size": "631.4 MB"
+      },
+      {
+        "path": "series/Bluey (2018)/Season 1/Bluey (2018) - S01E02 - Hospital Bluray-1080p.mkv",
+        "name": "Bluey (2018) - S01E02 - Hospital Bluray-1080p.mkv",
+        "issues": [
+          "DTS"
+        ],
+        "audio_codec": "DTS",
+        "video_codec": "H264",
+        "size": "623.7 MB"
+      },
+      {
+        "path": "series/Bluey (2018)/Season 1/Bluey (2018) - S01E03 - Keepy Uppy Bluray-1080p.mkv",
+        "name": "Bluey (2018) - S01E03 - Keepy Uppy Bluray-1080p.mkv",
+        "issues": [
+          "DTS"
+        ],
+        "audio_codec": "DTS",
+        "video_codec": "H264",
+        "size": "697.0 MB"
+      },
+      {
+        "path": "series/Bluey (2018)/Season 1/Bluey (2018) - S01E04 - Daddy Robot Bluray-1080p.mkv",
+        "name": "Bluey (2018) - S01E04 - Daddy Robot Bluray-1080p.mkv",
+        "issues": [
+          "DTS"
+        ],
+        "audio_codec": "DTS",
+        "video_codec": "H264",
+        "size": "703.4 MB"
+      },
+      {
+        "path": "series/Bluey (2018)/Season 1/Bluey (2018) - S01E05 - Shadowlands Bluray-1080p.mkv",
+        "name": "Bluey (2018) - S01E05 - Shadowlands Bluray-1080p.mkv",
+        "issues": [
+          "DTS"
+        ],
+        "audio_codec": "DTS",
+        "video_codec": "H264",
+        "size": "514.1 MB"
+      },
+      {
+        "path": "series/Bluey (2018)/Season 1/Bluey (2018) - S01E06 - The Weekend Bluray-1080p.mkv",
+        "name": "Bluey (2018) - S01E06 - The Weekend Bluray-1080p.mkv",
+        "issues": [
+          "DTS"
+        ],
+        "audio_codec": "DTS",
+        "video_codec": "H264",
+        "size": "295.5 MB"
+      },
+      {
+        "path": "series/Bluey (2018)/Season 1/Bluey (2018) - S01E07 - BBQ Bluray-1080p.mkv",
+        "name": "Bluey (2018) - S01E07 - BBQ Bluray-1080p.mkv",
+        "issues": [
+          "DTS"
+        ],
+        "audio_codec": "DTS",
+        "video_codec": "H264",
+        "size": "629.8 MB"
+      },
+      {
+        "path": "series/Bluey (2018)/Season 1/Bluey (2018) - S01E08 - Fruitbat Bluray-1080p.mkv",
+        "name": "Bluey (2018) - S01E08 - Fruitbat Bluray-1080p.mkv",
+        "issues": [
+          "DTS"
+        ],
+        "audio_codec": "DTS",
+        "video_codec": "H264",
+        "size": "302.3 MB"
+      },
+      {
+        "path": "series/Bluey (2018)/Season 1/Bluey (2018) - S01E09 - Horsey Ride Bluray-1080p.mkv",
+        "name": "Bluey (2018) - S01E09 - Horsey Ride Bluray-1080p.mkv",
+        "issues": [
+          "DTS"
+        ],
+        "audio_codec": "DTS",
+        "video_codec": "H264",
+        "size": "342.4 MB"
+      },
+      {
+        "path": "series/Bluey (2018)/Season 1/Bluey (2018) - S01E11 - Bike Bluray-1080p.mkv",
+        "name": "Bluey (2018) - S01E11 - Bike Bluray-1080p.mkv",
+        "issues": [
+          "DTS"
+        ],
+        "audio_codec": "DTS",
+        "video_codec": "H264",
+        "size": "550.0 MB"
+      },
+      {
+        "path": "series/Bluey (2018)/Season 1/Bluey (2018) - S01E12 - Bob Bilby Bluray-1080p.mkv",
+        "name": "Bluey (2018) - S01E12 - Bob Bilby Bluray-1080p.mkv",
+        "issues": [
+          "DTS"
+        ],
+        "audio_codec": "DTS",
+        "video_codec": "H264",
+        "size": "608.0 MB"
+      },
+      {
+        "path": "series/Bluey (2018)/Season 1/Bluey (2018) - S01E13 - Spygame Bluray-1080p.mkv",
+        "name": "Bluey (2018) - S01E13 - Spygame Bluray-1080p.mkv",
+        "issues": [
+          "DTS"
+        ],
+        "audio_codec": "DTS",
+        "video_codec": "H264",
+        "size": "578.6 MB"
+      },
+      {
+        "path": "series/Bluey (2018)/Season 1/Bluey (2018) - S01E14 - Takeaway Bluray-1080p.mkv",
+        "name": "Bluey (2018) - S01E14 - Takeaway Bluray-1080p.mkv",
+        "issues": [
+          "DTS"
+        ],
+        "audio_codec": "DTS",
+        "video_codec": "H264",
+        "size": "299.3 MB"
+      },
+      {
+        "path": "series/Bluey (2018)/Season 1/Bluey (2018) - S01E15 - Butterflies Bluray-1080p.mkv",
+        "name": "Bluey (2018) - S01E15 - Butterflies Bluray-1080p.mkv",
+        "issues": [
+          "DTS"
+        ],
+        "audio_codec": "DTS",
+        "video_codec": "H264",
+        "size": "549.6 MB"
+      },
+      {
+        "path": "series/Bluey (2018)/Season 1/Bluey (2018) - S01E16 - Yoga Ball Bluray-1080p.mkv",
+        "name": "Bluey (2018) - S01E16 - Yoga Ball Bluray-1080p.mkv",
+        "issues": [
+          "DTS"
+        ],
+        "audio_codec": "DTS",
+        "video_codec": "H264",
+        "size": "592.3 MB"
+      },
+      {
+        "path": "series/Bluey (2018)/Season 1/Bluey (2018) - S01E17 - Calypso Bluray-1080p.mkv",
+        "name": "Bluey (2018) - S01E17 - Calypso Bluray-1080p.mkv",
+        "issues": [
+          "DTS"
+        ],
+        "audio_codec": "DTS",
+        "video_codec": "H264",
+        "size": "325.5 MB"
+      },
+      {
+        "path": "series/Bluey (2018)/Season 1/Bluey (2018) - S01E18 - The Doctor Bluray-1080p.mkv",
+        "name": "Bluey (2018) - S01E18 - The Doctor Bluray-1080p.mkv",
+        "issues": [
+          "DTS"
+        ],
+        "audio_codec": "DTS",
+        "video_codec": "H264",
+        "size": "557.3 MB"
+      },
+      {
+        "path": "series/Bluey (2018)/Season 1/Bluey (2018) - S01E19 - The Claw Bluray-1080p.mkv",
+        "name": "Bluey (2018) - S01E19 - The Claw Bluray-1080p.mkv",
+        "issues": [
+          "DTS"
+        ],
+        "audio_codec": "DTS",
+        "video_codec": "H264",
+        "size": "297.5 MB"
+      },
+      {
+        "path": "series/Bluey (2018)/Season 1/Bluey (2018) - S01E20 - Markets Bluray-1080p.mkv",
+        "name": "Bluey (2018) - S01E20 - Markets Bluray-1080p.mkv",
+        "issues": [
+          "DTS"
+        ],
+        "audio_codec": "DTS",
+        "video_codec": "H264",
+        "size": "728.7 MB"
+      },
+      {
+        "path": "series/Bluey (2018)/Season 1/Bluey (2018) - S01E21 - Blue Mountains Bluray-1080p.mkv",
+        "name": "Bluey (2018) - S01E21 - Blue Mountains Bluray-1080p.mkv",
+        "issues": [
+          "DTS"
+        ],
+        "audio_codec": "DTS",
+        "video_codec": "H264",
+        "size": "308.4 MB"
+      },
+      {
+        "path": "series/Bluey (2018)/Season 1/Bluey (2018) - S01E22 - The Pool Bluray-1080p.mkv",
+        "name": "Bluey (2018) - S01E22 - The Pool Bluray-1080p.mkv",
+        "issues": [
+          "DTS"
+        ],
+        "audio_codec": "DTS",
+        "video_codec": "H264",
+        "size": "361.2 MB"
+      },
+      {
+        "path": "series/Bluey (2018)/Season 1/Bluey (2018) - S01E23 - Shops Bluray-1080p.mkv",
+        "name": "Bluey (2018) - S01E23 - Shops Bluray-1080p.mkv",
+        "issues": [
+          "DTS"
+        ],
+        "audio_codec": "DTS",
+        "video_codec": "H264",
+        "size": "312.1 MB"
+      },
+      {
+        "path": "series/Bluey (2018)/Season 1/Bluey (2018) - S01E24 - Wagon Ride Bluray-1080p.mkv",
+        "name": "Bluey (2018) - S01E24 - Wagon Ride Bluray-1080p.mkv",
+        "issues": [
+          "DTS"
+        ],
+        "audio_codec": "DTS",
+        "video_codec": "H264",
+        "size": "740.6 MB"
+      },
+      {
+        "path": "series/Bluey (2018)/Season 1/Bluey (2018) - S01E25 - Taxi Bluray-1080p.mkv",
+        "name": "Bluey (2018) - S01E25 - Taxi Bluray-1080p.mkv",
+        "issues": [
+          "DTS"
+        ],
+        "audio_codec": "DTS",
+        "video_codec": "H264",
+        "size": "634.8 MB"
+      },
+      {
+        "path": "series/Bluey (2018)/Season 1/Bluey (2018) - S01E26 - The Beach Bluray-1080p.mkv",
+        "name": "Bluey (2018) - S01E26 - The Beach Bluray-1080p.mkv",
+        "issues": [
+          "DTS"
+        ],
+        "audio_codec": "DTS",
+        "video_codec": "H264",
+        "size": "312.3 MB"
+      },
+      {
+        "path": "series/Bluey (2018)/Season 1/Bluey (2018) - S01E27 - Pirates Bluray-1080p.mkv",
+        "name": "Bluey (2018) - S01E27 - Pirates Bluray-1080p.mkv",
+        "issues": [
+          "DTS"
+        ],
+        "audio_codec": "DTS",
+        "video_codec": "H264",
+        "size": "770.2 MB"
+      },
+      {
+        "path": "series/Bluey (2018)/Season 1/Bluey (2018) - S01E28 - Grannies Bluray-1080p.mkv",
+        "name": "Bluey (2018) - S01E28 - Grannies Bluray-1080p.mkv",
+        "issues": [
+          "DTS"
+        ],
+        "audio_codec": "DTS",
+        "video_codec": "H264",
+        "size": "674.8 MB"
+      },
+      {
+        "path": "series/Bluey (2018)/Season 1/Bluey (2018) - S01E29 - The Creek Bluray-1080p.mkv",
+        "name": "Bluey (2018) - S01E29 - The Creek Bluray-1080p.mkv",
+        "issues": [
+          "DTS"
+        ],
+        "audio_codec": "DTS",
+        "video_codec": "H264",
+        "size": "387.9 MB"
+      },
+      {
+        "path": "series/Bluey (2018)/Season 1/Bluey (2018) - S01E30 - Fairies Bluray-1080p.mkv",
+        "name": "Bluey (2018) - S01E30 - Fairies Bluray-1080p.mkv",
+        "issues": [
+          "DTS"
+        ],
+        "audio_codec": "DTS",
+        "video_codec": "H264",
+        "size": "704.5 MB"
+      },
+      {
+        "path": "series/Bluey (2018)/Season 1/Bluey (2018) - S01E31 - Work Bluray-1080p.mkv",
+        "name": "Bluey (2018) - S01E31 - Work Bluray-1080p.mkv",
+        "issues": [
+          "DTS"
+        ],
+        "audio_codec": "DTS",
+        "video_codec": "H264",
+        "size": "706.5 MB"
+      },
+      {
+        "path": "series/Bluey (2018)/Season 1/Bluey (2018) - S01E32 - Bumpy and the Wise Old Wolfhound Bluray-1080p.mkv",
+        "name": "Bluey (2018) - S01E32 - Bumpy and the Wise Old Wolfhound Bluray-1080p.mkv",
+        "issues": [
+          "DTS"
+        ],
+        "audio_codec": "DTS",
+        "video_codec": "H264",
+        "size": "607.9 MB"
+      },
+      {
+        "path": "series/Bluey (2018)/Season 1/Bluey (2018) - S01E33 - Trampoline Bluray-1080p.mkv",
+        "name": "Bluey (2018) - S01E33 - Trampoline Bluray-1080p.mkv",
+        "issues": [
+          "DTS"
+        ],
+        "audio_codec": "DTS",
+        "video_codec": "H264",
+        "size": "705.3 MB"
+      },
+      {
+        "path": "series/Bluey (2018)/Season 1/Bluey (2018) - S01E34 - The Dump Bluray-1080p.mkv",
+        "name": "Bluey (2018) - S01E34 - The Dump Bluray-1080p.mkv",
+        "issues": [
+          "DTS"
+        ],
+        "audio_codec": "DTS",
+        "video_codec": "H264",
+        "size": "660.0 MB"
+      },
+      {
+        "path": "series/Bluey (2018)/Season 1/Bluey (2018) - S01E35 - Zoo Bluray-1080p.mkv",
+        "name": "Bluey (2018) - S01E35 - Zoo Bluray-1080p.mkv",
+        "issues": [
+          "DTS"
+        ],
+        "audio_codec": "DTS",
+        "video_codec": "H264",
+        "size": "663.4 MB"
+      },
+      {
+        "path": "series/Bluey (2018)/Season 1/Bluey (2018) - S01E36 - Backpackers Bluray-1080p.mkv",
+        "name": "Bluey (2018) - S01E36 - Backpackers Bluray-1080p.mkv",
+        "issues": [
+          "DTS"
+        ],
+        "audio_codec": "DTS",
+        "video_codec": "H264",
+        "size": "725.7 MB"
+      },
+      {
+        "path": "series/Bluey (2018)/Season 1/Bluey (2018) - S01E37 - The Adventure Bluray-1080p.mkv",
+        "name": "Bluey (2018) - S01E37 - The Adventure Bluray-1080p.mkv",
+        "issues": [
+          "DTS"
+        ],
+        "audio_codec": "DTS",
+        "video_codec": "H264",
+        "size": "678.2 MB"
+      },
+      {
+        "path": "series/Bluey (2018)/Season 1/Bluey (2018) - S01E38 - Copycat Bluray-1080p.mkv",
+        "name": "Bluey (2018) - S01E38 - Copycat Bluray-1080p.mkv",
+        "issues": [
+          "DTS"
+        ],
+        "audio_codec": "DTS",
+        "video_codec": "H264",
+        "size": "628.5 MB"
+      },
+      {
+        "path": "series/Bluey (2018)/Season 1/Bluey (2018) - S01E39 - The Sleepover Bluray-1080p.mkv",
+        "name": "Bluey (2018) - S01E39 - The Sleepover Bluray-1080p.mkv",
+        "issues": [
+          "DTS"
+        ],
+        "audio_codec": "DTS",
+        "video_codec": "H264",
+        "size": "624.4 MB"
+      },
+      {
+        "path": "series/Bluey (2018)/Season 1/Bluey (2018) - S01E40 - Early Baby Bluray-1080p.mkv",
+        "name": "Bluey (2018) - S01E40 - Early Baby Bluray-1080p.mkv",
+        "issues": [
+          "DTS"
+        ],
+        "audio_codec": "DTS",
+        "video_codec": "H264",
+        "size": "323.1 MB"
+      },
+      {
+        "path": "series/Bluey (2018)/Season 1/Bluey (2018) - S01E41 - Mums and Dads Bluray-1080p.mkv",
+        "name": "Bluey (2018) - S01E41 - Mums and Dads Bluray-1080p.mkv",
+        "issues": [
+          "DTS"
+        ],
+        "audio_codec": "DTS",
+        "video_codec": "H264",
+        "size": "316.5 MB"
+      },
+      {
+        "path": "series/Bluey (2018)/Season 1/Bluey (2018) - S01E42 - Hide and Seek Bluray-1080p.mkv",
+        "name": "Bluey (2018) - S01E42 - Hide and Seek Bluray-1080p.mkv",
+        "issues": [
+          "DTS"
+        ],
+        "audio_codec": "DTS",
+        "video_codec": "H264",
+        "size": "319.3 MB"
+      },
+      {
+        "path": "series/Bluey (2018)/Season 1/Bluey (2018) - S01E43 - Camping Bluray-1080p.mkv",
+        "name": "Bluey (2018) - S01E43 - Camping Bluray-1080p.mkv",
+        "issues": [
+          "DTS"
+        ],
+        "audio_codec": "DTS",
+        "video_codec": "H264",
+        "size": "594.1 MB"
+      },
+      {
+        "path": "series/Bluey (2018)/Season 1/Bluey (2018) - S01E44 - Mount Mumandad Bluray-1080p.mkv",
+        "name": "Bluey (2018) - S01E44 - Mount Mumandad Bluray-1080p.mkv",
+        "issues": [
+          "DTS"
+        ],
+        "audio_codec": "DTS",
+        "video_codec": "H264",
+        "size": "310.2 MB"
+      },
+      {
+        "path": "series/Bluey (2018)/Season 1/Bluey (2018) - S01E45 - Kids Bluray-1080p.mkv",
+        "name": "Bluey (2018) - S01E45 - Kids Bluray-1080p.mkv",
+        "issues": [
+          "DTS"
+        ],
+        "audio_codec": "DTS",
+        "video_codec": "H264",
+        "size": "767.4 MB"
+      },
+      {
+        "path": "series/Bluey (2018)/Season 1/Bluey (2018) - S01E46 - Chickenrat Bluray-1080p.mkv",
+        "name": "Bluey (2018) - S01E46 - Chickenrat Bluray-1080p.mkv",
+        "issues": [
+          "DTS"
+        ],
+        "audio_codec": "DTS",
+        "video_codec": "H264",
+        "size": "289.6 MB"
+      },
+      {
+        "path": "series/Bluey (2018)/Season 1/Bluey (2018) - S01E47 - Neighbours Bluray-1080p.mkv",
+        "name": "Bluey (2018) - S01E47 - Neighbours Bluray-1080p.mkv",
+        "issues": [
+          "DTS"
+        ],
+        "audio_codec": "DTS",
+        "video_codec": "H264",
+        "size": "300.9 MB"
+      },
+      {
+        "path": "series/Bluey (2018)/Season 1/Bluey (2018) - S01E48 - Teasing Bluray-1080p.mkv",
+        "name": "Bluey (2018) - S01E48 - Teasing Bluray-1080p.mkv",
+        "issues": [
+          "DTS"
+        ],
+        "audio_codec": "DTS",
+        "video_codec": "H264",
+        "size": "303.1 MB"
+      },
+      {
+        "path": "series/Bluey (2018)/Season 1/Bluey (2018) - S01E49 - Asparagus Bluray-1080p.mkv",
+        "name": "Bluey (2018) - S01E49 - Asparagus Bluray-1080p.mkv",
+        "issues": [
+          "DTS"
+        ],
+        "audio_codec": "DTS",
+        "video_codec": "H264",
+        "size": "328.1 MB"
+      },
+      {
+        "path": "series/Bluey (2018)/Season 1/Bluey (2018) - S01E50 - Shaun Bluray-1080p.mkv",
+        "name": "Bluey (2018) - S01E50 - Shaun Bluray-1080p.mkv",
+        "issues": [
+          "DTS"
+        ],
+        "audio_codec": "DTS",
+        "video_codec": "H264",
+        "size": "712.2 MB"
+      },
+      {
+        "path": "series/Bluey (2018)/Season 1/Bluey (2018) - S01E51 - Daddy Putdown Bluray-1080p.mkv",
+        "name": "Bluey (2018) - S01E51 - Daddy Putdown Bluray-1080p.mkv",
+        "issues": [
+          "DTS"
+        ],
+        "audio_codec": "DTS",
+        "video_codec": "H264",
+        "size": "716.5 MB"
+      },
+      {
+        "path": "series/Bluey (2018)/Season 1/Bluey (2018) - S01E52 - Verandah Santa Bluray-1080p.mkv",
+        "name": "Bluey (2018) - S01E52 - Verandah Santa Bluray-1080p.mkv",
+        "issues": [
+          "DTS"
+        ],
+        "audio_codec": "DTS",
+        "video_codec": "H264",
+        "size": "688.1 MB"
+      },
+      {
+        "path": "series/The X-Files/Season 2/The X-Files - S02E21 - The Calusari Bluray-1080p.mkv",
+        "name": "The X-Files - S02E21 - The Calusari Bluray-1080p.mkv",
+        "issues": [
+          "DTS"
+        ],
+        "audio_codec": "DTS",
+        "video_codec": "H264",
+        "size": "4.0 GB"
+      },
+      {
+        "path": "series/The X-Files/Season 2/The X-Files - S02E22 - F. Emasculata Bluray-1080p.mkv",
+        "name": "The X-Files - S02E22 - F. Emasculata Bluray-1080p.mkv",
+        "issues": [
+          "DTS"
+        ],
+        "audio_codec": "DTS",
+        "video_codec": "H264",
+        "size": "3.3 GB"
+      },
+      {
+        "path": "series/The X-Files/Season 2/The X-Files - S02E23 - Soft Light Bluray-1080p.mkv",
+        "name": "The X-Files - S02E23 - Soft Light Bluray-1080p.mkv",
+        "issues": [
+          "DTS"
+        ],
+        "audio_codec": "DTS",
+        "video_codec": "H264",
+        "size": "4.0 GB"
+      },
+      {
+        "path": "series/The X-Files/Season 2/The X-Files - S02E24 - Our Town Bluray-1080p.mkv",
+        "name": "The X-Files - S02E24 - Our Town Bluray-1080p.mkv",
+        "issues": [
+          "DTS"
+        ],
+        "audio_codec": "DTS",
+        "video_codec": "H264",
+        "size": "3.3 GB"
+      },
+      {
+        "path": "series/The X-Files/Season 2/The X-Files - S02E25 - Anasazi (1) Bluray-1080p Proper.mkv",
+        "name": "The X-Files - S02E25 - Anasazi (1) Bluray-1080p Proper.mkv",
+        "issues": [
+          "DTS"
+        ],
+        "audio_codec": "DTS",
+        "video_codec": "H264",
+        "size": "3.3 GB"
+      }
+    ],
+    "compatibility_percentage": 93.8
+  },
+  "media_root": "/mnt/wd_2tb/media"
+}
